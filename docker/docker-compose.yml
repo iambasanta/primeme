@@ -29,3 +29,11 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3306:3306
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: primeme-phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
