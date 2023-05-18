@@ -5,9 +5,13 @@ require("functions.php");
 require("Database.php");
 
 $config = require("config.php");
-
 $db = new Database($config["database"]);
-$users = $db->query("SELECT * FROM users")->fetchAll();
+
+$id = $_GET["id"];
+
+$query = "SELECT * FROM users where id = :id";
+
+$users = $db->query($query, [':id' => $id])->fetchAll();
 
 foreach ($users as $user) {
     echo "<li>".$user['username']."</li>";
