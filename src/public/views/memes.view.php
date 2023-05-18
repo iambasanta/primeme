@@ -9,9 +9,9 @@
     <body>
         <h1>Welcome to the Memes page!</h1> 
         <a href="/" >Home</a>
-        <a href="/register.php" >Register</a>
-        <a href="/login.php" >Login</a>
-        <a href="/memes.php" >Memes</a>
+        <a href="/register" >Register</a>
+        <a href="/login" >Login</a>
+        <a href="/memes" >Memes</a>
     </body>
 </html>
 
