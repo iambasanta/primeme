@@ -4,12 +4,15 @@ class Database {
 
     public $connection;
 
-    public function __construct() {
+    public function __construct($config, $username = "root", $password = "root") {
         try {
-            $dsn = "mysql:host=db;dbname=primeme;user=root;password=root";
+            $dsn = "mysql:" . http_build_query($config, "", ";");
 
-            $this->connection = new PDO($dsn);
+            $this->connection = new PDO($dsn, $username, $password, [
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            ]);
         } catch (PDOException $e) {
+
             throw new PDOException($e->getMessage(), $e->getCode());
         }
 
@@ -24,4 +27,3 @@ class Database {
         return $statement;
     }
 }
-
