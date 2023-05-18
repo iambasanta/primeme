@@ -1,3 +1,3 @@
 <?php
 
-    require("memes.view.php");
+    require("views/memes.view.php");
