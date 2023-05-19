@@ -24,7 +24,7 @@ password: `root`
 
 ```sql
 CREATE TABLE users (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     username VARCHAR(255) UNIQUE,
     email VARCHAR(255) UNIQUE,
     password VARCHAR(255),
@@ -35,12 +35,9 @@ CREATE TABLE users (
 - create `categories` table
 
 ```sql
-CREATE TABLE users (
-    id INT PRIMARY KEY,
-    username VARCHAR(255) UNIQUE,
-    email VARCHAR(255) UNIQUE,
-    password VARCHAR(255),
-    avatar VARCHAR(255)
+CREATE TABLE categories (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) UNIQUE
 );
 ```
 
@@ -48,10 +45,10 @@ CREATE TABLE users (
 
 ```sql
 CREATE TABLE memes (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     user_id INT,
     category_id INT,
-    title VARCHAR(255),
+    caption VARCHAR(255),
     image_path VARCHAR(255),
     votes INT DEFAULT 0,
     FOREIGN KEY (user_id) REFERENCES users(id),
