@@ -8,10 +8,21 @@
     </head>
     <body>
         <h1>Welcome to the Login page!</h1> 
-        <a href="/" >Home</a>
-        <a href="/register" >Register</a>
-        <a href="/login" >Login</a>
-        <a href="/memes" >Memes</a>
+        <form action="" method="POST">
+            Email
+            <input type="email" name="email" value="<?= $_POST['email'] ?? '' ?>" ><br>
+            <?php if(isset($errors["email"])) : ?>
+            <span style="font-size: 14px; color: red;"><?= $errors["email"] ?></span><br>
+            <?php endif; ?>
+
+            Password
+            <input type="password" name="password" value="<?= $_POST['password'] ?? '' ?>" ><br>
+            <?php if(isset($errors["password"])) : ?>
+            <span style="font-size: 14px; color: red;"><?= $errors["password"] ?></span><br>
+            <?php endif; ?>
+
+            <button>Login</button><br><br>
+        </form>
     </body>
 </html>
 
