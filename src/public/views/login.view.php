@@ -10,13 +10,13 @@
         <h1>Welcome to the Login page!</h1> 
         <form action="" method="POST">
             Email
-            <input type="email" name="email" value="<?= $_POST['email'] ?? '' ?>" ><br>
+            <input type="email" name="email" value="<?= $_POST['email'] ?? '' ?>" required><br>
             <?php if(isset($errors["email"])) : ?>
             <span style="font-size: 14px; color: red;"><?= $errors["email"] ?></span><br>
             <?php endif; ?>
 
             Password
-            <input type="password" name="password" value="<?= $_POST['password'] ?? '' ?>" ><br>
+            <input type="password" name="password" value="<?= $_POST['password'] ?? '' ?>" required><br>
             <?php if(isset($errors["password"])) : ?>
             <span style="font-size: 14px; color: red;"><?= $errors["password"] ?></span><br>
             <?php endif; ?>

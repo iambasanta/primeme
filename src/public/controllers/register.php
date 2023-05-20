@@ -1,30 +1,34 @@
 <?php
 
+require("Validator.php");
+
 $config = require("config.php");
 $db = new Database($config["database"]);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
 
-    if (strlen($_POST["username"]) === 0) {
+    if (Validator::string($_POST["username"])) {
         $errors["username"] = "The username field is required.";
+    } elseif (!Validator::length($_POST["username"], 4, 30)) {
+        $errors["username"] = "The username must be at least 4 characters long.";
     }
 
-    if (strlen($_POST["email"]) === 0) {
+    if (Validator::string($_POST["email"])) {
         $errors["email"] = "The email field is required.";
-    } elseif (!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)) {
+    } elseif (! Validator::email($_POST["email"])) {
         $errors["email"] = "Please enter a valid email address.";
-    } elseif (!preg_match("/^[A-Za-z0-9._%+-]+@prime\.edu\.np$/", $_POST["email"])) {
+    } elseif (! preg_match("/^[A-Za-z0-9._%+-]+@prime\.edu\.np$/", $_POST["email"])) {
         $errors["email"] = "The email address must be a valid prime.edu.np email.";
     }
 
-    if (strlen($_POST["password"]) === 0) {
+    if (Validator::string($_POST["password"])) {
         $errors["password"] = "The password field is required.";
-    } elseif (strlen($_POST["password"]) < 8) {
+    } elseif (! Validator::length($_POST["password"], 8, 255)) {
         $errors["password"] = "The password must be at least 8 characters long.";
     }
 
-    if (strlen($_POST["confirm_password"]) === 0) {
+    if (Validator::string($_POST["confirm_password"])) {
         $errors["confirm_password"] = "The confirm password field is required.";
     } elseif ($_POST["password"] !== $_POST["confirm_password"]) {
         $errors["confirm_password"] = "The password and confirm password must match.";
