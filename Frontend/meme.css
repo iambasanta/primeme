@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.txt {
+  text-align: center;
+  margin-top: 100px;
+}
+
+ul > li {
+  list-style: none;
+  font-size: larger;
+  font-weight: 600;
+}
+
+
+
+.num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 78px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Navigation bar */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: white;
+  color: black;
+  box-shadow: #f2f2f2;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  z-index: 10;
+}
+
+.nav-links a {
+  color: black;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: 'Inter';
+  height: 100%;
+}
+
+.logo p {
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  background-color: skyblue;
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .memeimg img {
+    width: 100%;
+    height: auto;
+  }
+  .my_post .post_button {
+    width: 100%;
+    max-width: auto; 
+    margin-top: -20px;
+   
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .center {
+    padding: 20px;
+  }
+
+  .my_post {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+
+  .my_post .post_top input {
+    width: 100%;
+  }
+
+  .my_post .post_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .my_post .post_bottom .post_icon {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .txt img {
+    width: 100%;
+    height: auto;
+  }
+
+  .meme_post {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+  }
+
+  .meme_post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
+
+}
+
+/* End of media Query */
+
+
+/* Post */
+
+.center {
+  
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.my_post {
+  
+  height: 165px;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.my_post img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.my_post .post_top {
+  display: flex;
+  align-items: center;
+}
+
+.my_post .post_top input {
+  width: 90%;
+  padding: 10px;
+  margin-left: 20px;
+  border: 0;
+  outline: none;
+  background: #efefef;
+  border-radius: 30px;
+  font-size: 17px;
+}
+
+.my_post .post_top input:hover {
+  background: #e3e3e3;
+  cursor: pointer;
+}
+
+.my_post hr {
+  width: 100%;
+  height: 1px;
+  background: #cccccc;
+  border: 0;
+  margin: 10px 0;
+}
+
+.my_post .post_bottom {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.my_post .post_bottom .post_icon {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.my_post .post_bottom .post_icon i.red {
+  font-size: 23px;
+  color: red;
+  margin-right: 8px;
+}
+
+.my_post .post_bottom .post_icon i.green {
+  font-size: 23px;
+  color: #27cc37;
+  margin-right: 8px;
+}
+
+.my_post .post_bottom .post_icon i.blue {
+  font-size: 23px;
+  color: blue;
+  margin-right: 8px;
+}
+
+.my_post .post_bottom .post_button {
+  background-color: #2982C2;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+/* meme vote css */
+
+ .meme_post {
+  height: auto;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 8px 8px 4px #F2C2CC;
+  margin: 10px 0;
+  margin-top: 50px;
+}
+ .meme_post .friend_post_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+ .meme_post .friend_post_top .img_and_name{
+    display: flex;
+    align-items: center;
+}
+
+.meme_post .friend_post_top .img_and_name img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+
+    .vote_button {
+      background-color: #C9BFFE;
+      color: black;
+      border: 3px solid black;
+      padding: 8px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%; 
+      max-width: 100%; 
+      height: 55px;
+      box-shadow: 4px 4px 0px #000000;
+    }
+    
+    .meme_post1 {
+      height: auto;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 7px;
+      box-shadow: 8px 8px 4px #D7C2F2;
+      margin: 10px 0;
+      margin-top: 50px;
+    }
+    .meme_post1 .friend_post_top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+  }
+  .meme_post1 .friend_post_top .img_and_name{
+    display: flex;
+    align-items: center;
+}
+.meme_post1 .friend_post_top .img_and_name img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 8px;
+  cursor: pointer;
+}
