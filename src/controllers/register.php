@@ -35,11 +35,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if(empty($errors)){
+        $hashedPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
         $db->query("INSERT INTO users(username, email, password, avatar) VALUES(:username, :email, :password, :avatar)",[
             "username" => $_POST["username"],
             "email" => $_POST["email"],
-            "password" => $_POST["password"],
+            "password" => $hashedPassword,
             "avatar" => null,
         ]);
     }

@@ -33,8 +33,6 @@
             <span style="font-size: 14px; color: red;"><?= $errors["confirm_password"] ?></span><br>
             <?php endif; ?>
 
-            Avatar
-            <input type="file" name="avatar"><br><br>
             <button>Register</button><br><br>
         </form>
     </body>
