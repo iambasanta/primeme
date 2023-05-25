@@ -79,84 +79,6 @@ ul > li {
   display: inline;
 }
 
-@media (max-width: 768px) {
-  .memeimg img {
-    width: 100%;
-    height: auto;
-  }
-  .my_post .post_button {
-    width: 100%;
-    max-width: auto; 
-    margin-top: -20px;
-   
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .center {
-    padding: 20px;
-  }
-
-  .my_post {
-    width: 100%;
-    border-radius: 8px;
-    padding: 10px 16px;
-    background-color: #fff;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-  }
-
-  .my_post .post_top input {
-    width: 100%;
-  }
-
-  .my_post .post_bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .my_post .post_bottom .post_icon {
-    padding: 10px;
-    margin: 5px;
-  }
-
-  .txt img {
-    width: 100%;
-    height: auto;
-  }
-
-  .meme_post {
-    width: 100%;
-    height: auto;
-    background: #fff;
-    padding: 10px 15px;
-    border-radius: 7px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
-  }
-
-  .meme_post img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-  }
-
-}
 
 /* End of media Query */
 
@@ -341,4 +263,112 @@ ul > li {
   object-position: center;
   margin-right: 8px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .center {
+    padding: 20px;
+    width: 80vw;
+    margin-left:-7vw
+  
+  
+   
+  }
+  
+  .my_post .post_button {
+    width: 100vw;
+    max-width: auto; 
+    margin-top: -20px;
+    background-color: #27cc37;
+   
+  }
+  .my_post {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+
+  .my_post .post_top input {
+    width: 80vw;
+    display: block;
+ margin: 0 auto;
+  }
+
+  .my_post .post_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .my_post .post_bottom .post_icon {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .txt img {
+    width: 100%;
+    height: auto;
+  }
+
+  .meme_post {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+  }
+
+  .meme_post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
+
+
+.meme_post1 {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+.meme_post1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+.post_icon{
+  
+  width:20%;
+
+}
+
 }
